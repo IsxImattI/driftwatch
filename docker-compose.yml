@@ -1,0 +1,19 @@
+services:
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "${DRIFTWATCH_TEST_SA_PASSWORD:-DriftW4tch!LocalTest}"
+    ports:
+      # Non-standard host port so it never clashes with a local instance.
+      - "14333:1433"
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "/opt/mssql-tools18/bin/sqlcmd -C -S localhost -U sa -P \"$${MSSQL_SA_PASSWORD}\" -Q \"SELECT 1\" -b",
+        ]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 20s
