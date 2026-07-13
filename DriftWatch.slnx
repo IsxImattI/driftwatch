@@ -4,6 +4,7 @@
     <Project Path="src/DriftWatch.Core/DriftWatch.Core.csproj" />
   </Folder>
   <Folder Name="/tests/">
+    <Project Path="tests/DriftWatch.Cli.Tests/DriftWatch.Cli.Tests.csproj" />
     <Project Path="tests/DriftWatch.Core.IntegrationTests/DriftWatch.Core.IntegrationTests.csproj" />
     <Project Path="tests/DriftWatch.Core.Tests/DriftWatch.Core.Tests.csproj" />
   </Folder>
