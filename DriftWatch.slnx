@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/DriftWatch.Cli/DriftWatch.Cli.csproj" />
+    <Project Path="src/DriftWatch.Core/DriftWatch.Core.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/DriftWatch.Core.Tests/DriftWatch.Core.Tests.csproj" />
+  </Folder>
+</Solution>
